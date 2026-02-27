@@ -1,0 +1,9 @@
+name: pb_pickplace
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - pybullet>=3.2.5
+      - numpy>=1.23
