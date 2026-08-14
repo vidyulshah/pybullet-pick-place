@@ -1,1 +1,10 @@
-assets/
+__pycache__/
+*.pyc
+.env
+.venv/
+.envrc
+*.log
+.DS_Store
+.ipynb_checkpoints/
+.idea/
+.vscode/

@@ -1,0 +1,48 @@
+# ── PyBullet Pick-and-Place — Runtime Config ──────────────────────────────────
+# All fields are optional; missing keys fall back to hardcoded defaults.
+# Override any value here without touching source code.
+
+sim:
+  gui:            true      # false for headless / CI
+  renderer:       tiny      # tiny | opengl | auto
+  timestep:       0.004167  # 1/240 s
+  gravity_z:      -9.81
+  seed:           0
+  sleep_if_gui:   true
+
+spawn:
+  n_cubes:             4
+  cube_size:           0.04    # metres
+  cube_mass:           0.05    # kg
+  margin_xy:           0.16
+  reach_min:           0.20
+  reach_max:           0.60
+  min_dist_xy:         0.10
+
+camera:
+  width:      320
+  height:     220
+  fov_y_deg:  75.0
+  near:       0.02
+  far:        5.0
+
+grasp:
+  approach_height:           0.14
+  lift_height:               0.18
+  ik_max_iters:              180
+  ik_residual:               0.0001
+  traj_steps:                180
+  gripper_open:              0.04
+  gripper_closed:            0.0
+  gripper_settle_seconds:    0.30
+  success_lift_threshold:    0.05
+  max_pick_retries:          2
+  survey_height_above_table: 0.65
+
+pipeline:
+  autonomous:                true   # false = interactive terminal prompts
+  max_consecutive_failures:  3      # triggers ESTOP
+  inter_pick_pause_s:        0.5
+
+log_dir:      logs
+metrics_csv:  logs/metrics.csv
